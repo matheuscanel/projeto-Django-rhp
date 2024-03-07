@@ -12,6 +12,13 @@
   </style>
 </head>
 <body>
+
+<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div id="header">
+    <img src="../static/img/logoRHP.png" alt="Logo" class="LOGORHP">
+</div>
   <!-- jQuery (obrigatório para o inputmask) -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -25,11 +32,11 @@
       {% csrf_token %}
         <!-- Campos de entrada -->
       <label for="nome">Nome:</label>
-      <input type="text" placeholder="Nome" name="nome" required>
+      <input type="text" name="nome" required>
       <br>
     
       <label for="cracha">Crachá:</label>
-      <input type="text" placeholder="Crachá" name="cracha" required>
+      <input type="text" name="cracha" required>
       <br>
 
       <label for="cpf">CPF:</label>
@@ -37,37 +44,38 @@
       <br>
 
       <label for="data_nascimento">Data de Nascimento:</label>
-      <input type="text" placeholder="Data de Nascimento" name="data_nascimento" required>
+      <input type="text" name="data_nascimento" required>
       <br>
 
       <label for="estado_nascimento">Estado de Nascimento:</label>
-      <input type="text" placeholder="Estado de Nascimento" name="estado_nascimento" required>
+      <input type="text" name="estado_nascimento" required>
       <br>
 
       <label for="cidade_nascimento">Cidade de Nascimento:</label>
-      <input type="text" placeholder="Cidade de Nascimento" name="cidade_nascimento" required>
+      <input type="text" name="cidade_nascimento" required>
       <br>
 
       <label for="genero">Sexo:</label>
-        <select name="genero" required>
+        <select name="sexo" required>
+          <option value="" disabled selected></option>
           <option value="Masculino">Masculino</option>
           <option value="Feminino">Feminino</option>
         </select>
 
       <label for="raca">Raça:</label>
-      <input type="text" placeholder="Raça" name="raca" required>
+      <input type="text" name="raca" required>
       <br>
 
       <label for="estado_civil">Estado Civil:</label>
-      <input type="text" placeholder="Estado Civil" name="estado_civil" required>
+      <input type="text" name="estado_civil" required>
       <br>
 
       <label for="email">Email:</label>
-      <input type="text" placeholder="Email" name="email" required>
+      <input type="text" name="email" required>
       <br>
 
       <label for="celular">Celular:</label>
-      <input type="text" placeholder="Celular" name="celular" required>
+      <input type="text" name="celular" required>
       <br>
 
       <label for="cep">CEP:</label>
@@ -75,55 +83,55 @@
       <br>
 
       <label for="estado">Estado:</label>
-      <input type="text" placeholder="Estado" name="estado" required>
+      <input type="text" name="estado" required>
       <br>
 
       <label for="cidade">Cidade:</label>
-      <input type="text" placeholder="Cidade" name="cidade" required>
+      <input type="text" name="cidade" required>
       <br>
 
       <label for="bairro">Bairro:</label>
-      <input type="text" placeholder="Bairro" name="bairro" required>
+      <input type="text" name="bairro" required>
       <br>
 
       <label for="endereco">Endereço:</label>
-      <input type="text" placeholder="Endereço" name="endereco" required>
+      <input type="text" name="endereco" required>
       <br>
 
       <label for="complemento">Complemento:</label>
-      <input type="text" placeholder="Complemento" name="complemento" required>
+      <input type="text" name="complemento" required>
       <br>
 
       <label for="grau_de_instrucao">Grau de Instrução:</label>
-      <input type="text" placeholder="Grau de Instrução" name="grau_de_instrucao" required>
+      <input type="text" name="grau_de_instrucao" required>
       <br>
 
       <label for="conselho">Conselho:</label>
-      <input type="text" placeholder="Conselho" name="conselho" required>
+      <input type="text" name="conselho" required>
       <br>
 
       <label for="especialidade">Especialidade:</label>
-      <input type="text" placeholder="Especialidade" name="especialidade" required>
+      <input type="text" name="especialidade" required>
       <br>
 
       <label for="especialidade2">Segunda Especialidade:</label>
-      <input type="text" placeholder="Segunda Especialidade" name="especialidade2" required>
+      <input type="text" name="especialidade2" required>
       <br>
 
       <label for="honorarios">Honorários:</label>
-      <input type="text" placeholder="Honorários" name="honorarios" required>
+      <input type="text" name="honorarios" required>
       <br>
 
       <label for="clinica1">Clínica 1:</label>
-      <input type="text" placeholder="Clínica 1" name="clinica1" required>
+      <input type="text" name="clinica1" required>
       <br>
 
       <label for="clinica2">Clínica 2:</label>
-      <input type="text" placeholder="Clínica 2" name="clinica2" required>
+      <input type="text" name="clinica2" required>
       <br>
 
       <label for="clinica3">Clínica 3:</label>
-      <input type="text" placeholder="Clínica 3" name="clinica3" required>
+      <input type="text" name="clinica3" required>
       <br>
 
       <!-- Botão de envio -->
@@ -144,6 +152,10 @@
 
           // Aplicar a máscara ao campo de Data de Nascimento
           $('input[name="data_nascimento"]').inputmask('99/99/9999', { placeholder: '__/__/____' });
+
+          // Aplicar a máscara ao campo de Celular
+          $('input[name="celular"]').inputmask('(99) 99999-9999', { placeholder: '(__) _____-____' });
+
         });
 
 
