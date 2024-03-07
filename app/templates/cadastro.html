@@ -1,27 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro médico</title>
+</head>
+<body>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <div class="container">
+    <h1>Cadastro médico</h1>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Só treino ombro</h1>
+    <form   method="POST" action="{% url 'cadastro_concluido' %}">
+      {% csrf_token %}
+        <!-- Campos de entrada -->
+    <label for="nome">Nome:</label>
+    <input type="text" placeholder="Nome" name="nome">
+    <br>
+    
+    <label for="cracha">Crachá:</label>
+    <input type="text" placeholder="Crachá" name="cracha">
+    <br>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <label for="cpf">CPF:</label>
+    <input type="text" placeholder="CPF" name="cpf">
+    <br>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <label for="data_nascimento">Data de Nascimento:</label>
+    <input type="text" placeholder="Data de Nascimento" name="data_nascimento">
+    <br>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+    <label for="estado_nascimento">Estado de Nascimento:</label>
+    <input type="text" placeholder="Estado de Nascimento" name="estado_nascimento">
+    <br>
+
+    <label for="cidade_nascimento">Cidade de Nascimento:</label>
+    <input type="text" placeholder="Cidade de Nascimento" name="cidade_nascimento">
+    <br>
+
+    <label for="sexo">Sexo:</label>
+    <input type="text" placeholder="Sexo" name="sexo">
+    <br>
+
+    <label for="raca">Raça:</label>
+    <input type="text" placeholder="Raça" name="raca">
+    <br>
+
+    <label for="estado_civil">Estado Civil:</label>
+    <input type="text" placeholder="Estado Civil" name="estado_civil">
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="text" placeholder="Email" name="email">
+    <br>
+
+    <label for="celular">Celular:</label>
+    <input type="text" placeholder="Celular" name="celular">
+    <br>
+
+    <label for="cep">CEP:</label>
+    <input type="text" placeholder="CEP" name="cep">
+    <br>
+
+    <label for="estado">Estado:</label>
+    <input type="text" placeholder="Estado" name="estado">
+    <br>
+
+    <label for="cidade">Cidade:</label>
+    <input type="text" placeholder="Cidade" name="cidade">
+    <br>
+
+    <label for="bairro">Bairro:</label>
+    <input type="text" placeholder="Bairro" name="bairro">
+    <br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" placeholder="Endereço" name="endereco">
+    <br>
+
+    <label for="complemento">Complemento:</label>
+    <input type="text" placeholder="Complemento" name="complemento">
+    <br>
+
+    <label for="grau_de_instrucao">Grau de Instrução:</label>
+    <input type="text" placeholder="Grau de Instrução" name="grau_de_instrucao">
+    <br>
+
+    <label for="conselho">Conselho:</label>
+    <input type="text" placeholder="Conselho" name="conselho">
+    <br>
+
+    <label for="especialidade">Especialidade:</label>
+    <input type="text" placeholder="Especialidade" name="especialidade">
+    <br>
+
+    <label for="especialidade2">Segunda Especialidade:</label>
+    <input type="text" placeholder="Segunda Especialidade" name="especialidade2">
+    <br>
+
+    <label for="honorarios">Honorários:</label>
+    <input type="text" placeholder="Honorários" name="honorarios">
+    <br>
+
+    <label for="clinica1">Clínica 1:</label>
+    <input type="text" placeholder="Clínica 1" name="clinica1">
+    <br>
+
+    <label for="clinica2">Clínica 2:</label>
+    <input type="text" placeholder="Clínica 2" name="clinica2">
+    <br>
+
+    <label for="clinica3">Clínica 3:</label>
+    <input type="text" placeholder="Clínica 3" name="clinica3">
+    <br>
+
+    <!-- Botão de envio -->
+    <input type="submit" value="Enviar">
+    </form>
+
+  </div>
+
+</body>
 </html>
