@@ -11,6 +11,16 @@
       color: red;
     }
   </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+  <script src="../static/js/index.js"></script>
 </head>
 
 <body>
@@ -21,13 +31,11 @@
   <div id="header">
     <img src="../static/img/logoRHP.png" alt="Logo" class="LOGORHP">
   </div>
-  <!-- jQuery (obrigatório para o inputmask) -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-  <!-- Inputmask -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 
-  <div class="container">
+
+
+  <div class=" container">
     <div class="titulo">
       <h2> <strong> Ficha Cadastral para os Profissionais Terceiros da Área de Saúde </strong> </h2>
     </div>
@@ -38,27 +46,27 @@
       <!-- Campos de entrada -->
       <label for="nome">Nome:</label>
       <input type="text" name="nome" required>
-      <br>
+
 
       <label for="cracha">Crachá:</label>
       <input type="text" name="cracha" required>
-      <br>
+
 
       <label for="cpf">CPF:</label>
       <input type="text" name="cpf" required maxlength="14">
-      <br>
+
 
       <label for="data_nascimento">Data de Nascimento:</label>
       <input type="text" name="data_nascimento" required>
-      <br>
+
 
       <label for="estado_nascimento">Estado de Nascimento:</label>
       <input type="text" name="estado_nascimento" required>
-      <br>
+
 
       <label for="cidade_nascimento">Cidade de Nascimento:</label>
       <input type="text" name="cidade_nascimento" required>
-      <br>
+
 
       <label for="genero">Sexo:</label>
       <select name="sexo" required>
@@ -69,75 +77,78 @@
 
       <label for="raca">Raça:</label>
       <input type="text" name="raca" required>
-      <br>
+
 
       <label for="estado_civil">Estado Civil:</label>
       <input type="text" name="estado_civil" required>
-      <br>
+
 
       <label for="email">Email:</label>
       <input type="text" name="email" required>
-      <br>
+
 
       <label for="celular">Celular:</label>
       <input type="text" name="celular" required>
-      <br>
+
 
       <label for="cep">CEP:</label>
       <input type="text" name="cep" required>
-      <br>
+
 
       <label for="estado">Estado:</label>
       <input type="text" name="estado" required>
-      <br>
+
 
       <label for="cidade">Cidade:</label>
       <input type="text" name="cidade" required>
-      <br>
+
 
       <label for="bairro">Bairro:</label>
       <input type="text" name="bairro" required>
-      <br>
+
 
       <label for="endereco">Endereço:</label>
       <input type="text" name="endereco" required>
-      <br>
+
 
       <label for="complemento">Complemento:</label>
       <input type="text" name="complemento" required>
-      <br>
+
 
       <label for="grau_de_instrucao">Grau de Instrução:</label>
       <input type="text" name="grau_de_instrucao" required>
-      <br>
+
 
       <label for="conselho">Conselho:</label>
       <input type="text" name="conselho" required>
-      <br>
+
 
       <label for="especialidade">Especialidade:</label>
       <input type="text" name="especialidade" required>
-      <br>
+
 
       <label for="especialidade2">Segunda Especialidade:</label>
       <input type="text" name="especialidade2" required>
-      <br>
+
 
       <label for="honorarios">Honorários:</label>
       <input type="text" name="honorarios" required>
-      <br>
 
-      <label for="clinica1">Clínica 1:</label>
+      <div class="clinica">
+        <h2>Clínica</h2>
+      </div>
+
+      <label for="clinica1">Nas dependências do RHP, Qual?</label>
       <input type="text" name="clinica1" required>
-      <br>
 
-      <label for="clinica2">Clínica 2:</label>
+
+      <label for="clinica2">Assinatura e carimbo do coordenador da Clínica:</label>
       <input type="text" name="clinica2" required>
-      <br>
 
-      <label for="clinica3">Clínica 3:</label>
+
+      <label for="clinica3">Clínica Externa. Qual?</label>
       <input type="text" name="clinica3" required>
-      <br>
+
 
 
       <input type="submit" value="Enviar" class="btn">
@@ -147,63 +158,7 @@
 
 
 
-  <script>
-    $(document).ready(function () {
-      // Aplicar a máscara ao campo de CPF
-      $('input[name="cpf"]').inputmask('999.999.999-99', { placeholder: '000.000.000-00' });
 
-      // Aplicar a máscara ao campo de CEP
-      $('input[name="cep"]').inputmask('99999-999', { placeholder: '_____-___' });
-
-      // Aplicar a máscara ao campo de Data de Nascimento
-      $('input[name="data_nascimento"]').inputmask('99/99/9999', { placeholder: '__/__/____' });
-
-      // Aplicar a máscara ao campo de Celular
-      $('input[name="celular"]').inputmask('(99) 99999-9999', { placeholder: '(__) _____-____' });
-
-    });
-
-
-    function validateForm() {
-      var form = document.getElementById('cadastroForm');
-      var elements = form.elements;
-
-      for (var i = 0; i < elements.length; i++) {
-        if (elements[i].required && elements[i].value.trim() === '') {
-          alert('Por favor, preencha todos os campos obrigatórios.');
-          return false;
-        }
-      }
-
-      return true;
-    }
-
-
-    function validateForm() {
-      var form = document.getElementById('cadastroForm');
-      var elements = form.elements;
-
-      for (var i = 0; i < elements.length; i++) {
-        if (elements[i].required && elements[i].value.trim() === '') {
-          alert('Por favor, preencha todos os campos obrigatórios.');
-          return false;
-        }
-
-        if (elements[i].name === 'email' && !isValidEmail(elements[i].value)) {
-          alert('Por favor, insira um endereço de email válido.');
-          return false;
-        }
-      }
-
-      return true;
-    }
-
-    function isValidEmail(email) {
-      // Expressão regular simples para validação de email
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
-  </script>
 </body>
 
 </html>
