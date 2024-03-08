@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,14 +12,15 @@
     }
   </style>
 </head>
+
 <body>
 
-<link rel="stylesheet" type="text/css" href="../static/css/styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div id="header">
+  <div id="header">
     <img src="../static/img/logoRHP.png" alt="Logo" class="LOGORHP">
-</div>
+  </div>
   <!-- jQuery (obrigatório para o inputmask) -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -26,15 +28,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 
   <div class="container">
-    <h1>Cadastro médico</h1>
+    <div class="titulo">
+      <h2> <strong> Ficha Cadastral para os Profissionais Terceiros da Área de Saúde </strong> </h2>
+    </div>
+
 
     <form id="cadastroForm" method="POST" action="{% url 'cadastro_concluido' %}" onsubmit="return validateForm()">
       {% csrf_token %}
-        <!-- Campos de entrada -->
+      <!-- Campos de entrada -->
       <label for="nome">Nome:</label>
       <input type="text" name="nome" required>
       <br>
-    
+
       <label for="cracha">Crachá:</label>
       <input type="text" name="cracha" required>
       <br>
@@ -56,11 +61,11 @@
       <br>
 
       <label for="genero">Sexo:</label>
-        <select name="sexo" required>
-          <option value="" disabled selected></option>
-          <option value="Masculino">Masculino</option>
-          <option value="Feminino">Feminino</option>
-        </select>
+      <select name="sexo" required>
+        <option value="" disabled selected></option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+      </select>
 
       <label for="raca">Raça:</label>
       <input type="text" name="raca" required>
@@ -134,29 +139,29 @@
       <input type="text" name="clinica3" required>
       <br>
 
-      <!-- Botão de envio -->
-      <input type="submit" value="Enviar">
+
+      <input type="submit" value="Enviar" class="btn">
     </form>
 
   </div>
 
-  
+
 
   <script>
-    $(document).ready(function() {
-          // Aplicar a máscara ao campo de CPF
-          $('input[name="cpf"]').inputmask('999.999.999-99', { placeholder: '000.000.000-00' });
+    $(document).ready(function () {
+      // Aplicar a máscara ao campo de CPF
+      $('input[name="cpf"]').inputmask('999.999.999-99', { placeholder: '000.000.000-00' });
 
-          // Aplicar a máscara ao campo de CEP
-          $('input[name="cep"]').inputmask('99999-999', { placeholder: '_____-___' });
+      // Aplicar a máscara ao campo de CEP
+      $('input[name="cep"]').inputmask('99999-999', { placeholder: '_____-___' });
 
-          // Aplicar a máscara ao campo de Data de Nascimento
-          $('input[name="data_nascimento"]').inputmask('99/99/9999', { placeholder: '__/__/____' });
+      // Aplicar a máscara ao campo de Data de Nascimento
+      $('input[name="data_nascimento"]').inputmask('99/99/9999', { placeholder: '__/__/____' });
 
-          // Aplicar a máscara ao campo de Celular
-          $('input[name="celular"]').inputmask('(99) 99999-9999', { placeholder: '(__) _____-____' });
+      // Aplicar a máscara ao campo de Celular
+      $('input[name="celular"]').inputmask('(99) 99999-9999', { placeholder: '(__) _____-____' });
 
-        });
+    });
 
 
     function validateForm() {
@@ -173,7 +178,7 @@
       return true;
     }
 
-  
+
     function validateForm() {
       var form = document.getElementById('cadastroForm');
       var elements = form.elements;
@@ -200,4 +205,5 @@
     }
   </script>
 </body>
+
 </html>
