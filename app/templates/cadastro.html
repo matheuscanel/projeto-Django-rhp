@@ -61,7 +61,10 @@
 
 
       <label for="estado_nascimento">Estado de Nascimento:</label>
-      <input type="text" name="estado_nascimento" required>
+      <select name="estado_nascimento" id="estado_nascimento">
+        <option value="" disabled selected>Selecione...</option>
+      </select>
+      <!-- <input type="text" name="estado_nascimento" required> -->
 
 
       <label for="cidade_nascimento">Cidade de Nascimento:</label>
@@ -70,17 +73,35 @@
 
       <label for="genero">Sexo:</label>
       <select name="sexo" required>
-        <option value="" disabled selected></option>
+        <option value="" disabled selected>Selecione...</option>
         <option value="Masculino">Masculino</option>
         <option value="Feminino">Feminino</option>
       </select>
 
       <label for="raca">Raça:</label>
-      <input type="text" name="raca" required>
+      <select name="raca" id="raca" required>
+        <option value="" disabled selected>Selecione...</option>
+        <option value="">Parda</option>
+        <option value="">Branca</option>
+        <option value="">Preta</option>
+        <option value="">Indígena</option>
+        <option value="">Amarela</option>
+      </select>
+
 
 
       <label for="estado_civil">Estado Civil:</label>
-      <input type="text" name="estado_civil" required>
+
+      <select name="estado_civil" id="estado_civil">
+        <option value="" selected disabled>Selecione...</option>
+        <option value="">Solteiro</option>
+        <option value="">Casado</option>
+        <option value="">Separado</option>
+        <option value="">Divorciado</option>
+        <option value="">Viúvo</option>
+        <option value="">União Estavel</option>
+
+      </select>
 
 
       <label for="email">Email:</label>
@@ -96,7 +117,10 @@
 
 
       <label for="estado">Estado:</label>
-      <input type="text" name="estado" required>
+      <select name="estado" id="estado" required>
+        <option value="" disabled selected>Selecione...</option>
+      </select>
+
 
 
       <label for="cidade">Cidade:</label>
@@ -116,7 +140,13 @@
 
 
       <label for="grau_de_instrucao">Grau de Instrução:</label>
-      <input type="text" name="grau_de_instrucao" required>
+      <select name="" id="">
+        <option value="" selected disabled>Selecione...</option>
+        <option value="">Superior completo</option>
+        <option value="">Mestrado</option>
+        <option value="">Doutorado</option>
+        <option value="">Ph.D</option>
+      </select>
 
 
       <label for="conselho">Conselho:</label>
