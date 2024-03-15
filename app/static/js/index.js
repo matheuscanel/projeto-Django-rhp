@@ -8,6 +8,7 @@ $(document).ready(function () {
     $('input[name="cep"]').inputmask('99999-999', { placeholder: '_____-___' });
 
     // Aplicar a máscara ao campo de Data de Nascimento
+     
     $('input[name="data_nascimento"]').inputmask('99/99/9999', { placeholder: '__/__/____' });
 
     // Aplicar a máscara ao campo de Celular
