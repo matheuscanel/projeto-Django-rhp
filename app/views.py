@@ -4,9 +4,9 @@ from .forms import formulario
 from .automations.cod import automacao
 import threading, time
 
-def chamar_automacao():
-    time.sleep(10)
-    automacao()
+# def chamar_automacao():
+#     time.sleep(10)
+#     automacao()
 
 def cadastro(request):
     return render(request, 'cadastro.html')
@@ -71,7 +71,7 @@ def cadastro_concluido(request):
 
         medicos.save()
 
-        threading.Thread(target=chamar_automacao).start()
+        # threading.Thread(target=chamar_automacao).start()
 
     #add ao banco
     return render(request, "cadastro_concluido.html") 

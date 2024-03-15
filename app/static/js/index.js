@@ -13,6 +13,11 @@ $(document).ready(function () {
 
     // Aplicar a máscara ao campo de Celular
     $('input[name="celular"]').inputmask('(99) 99999-9999', { placeholder: '(__) _____-____' });
+
+    $('.select2').select2({
+        placeholder: 'Selecione o estado',
+        allowClear: true
+      });
 });
 
 function validateForm() {
