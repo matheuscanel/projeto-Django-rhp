@@ -3,7 +3,7 @@ from django.db import models
 class Medicos(models.Model):
     nome = models.CharField(max_length=150)
     cracha = models.CharField(max_length=50)
-    cpf = models.CharField(max_length=11)
+    cpf = models.CharField(max_length=11, unique=True)
     data_nascimento = models.CharField(max_length=12)
     estado_nascimento = models.CharField(max_length=50)
     cidade_nascimento = models.CharField(max_length=50)
