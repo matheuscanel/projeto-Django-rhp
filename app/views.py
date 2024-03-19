@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Medicos
 from .forms import formulario
-from .automations.cod import automacao
 import threading, time
 
 # def chamar_automacao():
